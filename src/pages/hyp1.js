@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Sidebar from '../components/sidebar/sidebar'
+import ReactGA from 'react-ga';
 
 const Hyp1 = () => {
+    useEffect(() => {
+        ReactGA.pageview('/hyp1')
+    }, [])
+
     return(
         <div className="content">
             <aside className="sidebar">

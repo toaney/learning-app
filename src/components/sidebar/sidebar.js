@@ -1,4 +1,7 @@
 import React, { Fragment } from 'react'
+import ReactGA from 'react-ga';
+
+ReactGA.pageview('/hyp1')
 
 const Sidebar = () => {
     return (
