@@ -2,3 +2,20 @@ body {
     margin: 0;
     background-color: #E0F0FF;
 }
+
+.content {
+    max-width: 900px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    margin: 20px auto;
+    display: flex;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #eeeeee;
+}
+
+.main {
+    width: 600px;
+}

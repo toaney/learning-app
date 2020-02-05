@@ -1,8 +1,17 @@
 import React from 'react';
+import Sidebar from '../components/sidebar/sidebar'
 
 const Hyp1 = () => {
     return(
-        <h1>Hyp1</h1>
+        <div className="content">
+            <aside className="sidebar">
+                <Sidebar />
+            </aside>
+            <main className="main">
+                <h1>Hyp1</h1>
+                {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/mRdMYuNeAng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+            </main>
+        </div>
     )
 }
 
