@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import ReactGA from 'react-ga';
+// import ReactGA from 'react-ga';
 
 const Hyp2 = () => {
 
-    useEffect(() => {
-        ReactGA.pageview('/hyp2')
-    }, [])
+    // useEffect(() => {
+    //     ReactGA.pageview('/hyp2')
+    // }, [])
 
     return(
         <h1>Hyp2</h1>

@@ -5,9 +5,9 @@ ReactGA.pageview('/home')
 
 const Home = () => {
 
-    useEffect(() => {
-        ReactGA.pageview('/home')
-    }, [])
+    // useEffect(() => {
+    //     ReactGA.pageview('/home')
+    // }, [])
 
     return(
         <h1>Home</h1>
