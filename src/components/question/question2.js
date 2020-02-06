@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment} from 'react';
 
-const Question = ({dispatch, questions}) => {
+const Question2 = ({dispatch, questions}) => {
     const [ choice1, setChoice1 ] = useState(questions.answers[0])
     const [ choice2, setChoice2 ] = useState(questions.answers[1])
     const [ choice3, setChoice3 ] = useState(questions.answers[2])
@@ -41,8 +41,16 @@ const Question = ({dispatch, questions}) => {
             <p><input type="radio" id={`${questions.id}${choice2}`} name={questions.id} checked={selected === choice2} value={choice2} onClick={(e) => handleClick(e)} /><label for={`${questions.id}${choice2}`}>{choice2}</label></p>
             <p><input type="radio" id={`${questions.id}${choice3}`} name={questions.id} checked={selected === choice3} value={choice3} onClick={(e) => handleClick(e)} /><label for={`${questions.id}${choice3}`}>{choice3}</label></p>
             <p><input type="radio" id={`${questions.id}${choice4}`} name={questions.id} checked={selected === choice4} value={choice4} onClick={(e) => handleClick(e)} /><label for={`${questions.id}${choice4}`}>{choice4}</label></p>
+            {selected === questions.correctAnswer?
+                <p>Correct!</p>
+            :
+                selected === null?
+                    ''
+                    :
+                    <p>Incorrect</p>
+            }
         </Fragment>
     )
 }
 
-export default Question
+export default Question2

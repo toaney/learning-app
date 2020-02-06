@@ -8,6 +8,8 @@ import Home from './pages/home';
 import Hyp1 from './pages/hyp1';
 import Hyp2 from './pages/hyp2';
 import Hyp3 from './pages/hyp3';
+import Hyp4 from './pages/hyp4';
+import Hyp5 from './pages/hyp5';
 import Header from './components/header/header';
 import TagManager from 'react-gtm-module';
 
@@ -29,6 +31,8 @@ ReactDOM.render(
         <Route path="/hyp1" component={ Hyp1 } />
         <Route path="/hyp2" component={ Hyp2 } />
         <Route path="/hyp3" component={ Hyp3 } />
+        <Route path="/hyp4" component={ Hyp4 } />
+        <Route path="/hyp5" component={ Hyp5 } />
         <Route component={ Home } />
       </Switch>
     </Router>,
