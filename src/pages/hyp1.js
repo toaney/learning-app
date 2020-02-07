@@ -6,8 +6,6 @@ const Hyp1 = () => {
 
     return(
         <div className="content-container">
-            <div className="content-header">
-            </div>
             <div className="content">
                 <div className="content-main">
                     <iframe className="content-video" width="560" height="315" src="https://www.youtube.com/embed/mRdMYuNeAng?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

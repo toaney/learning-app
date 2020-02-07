@@ -6,8 +6,6 @@ const Hyp3 = () => {
 
     return(
         <div className="content-container">
-            <div className="content-header">
-            </div>
             <div className="content">
                 <div className="content-centered">
                     <div className="content-description">
