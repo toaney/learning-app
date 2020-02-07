@@ -1,0 +1,33 @@
+.quiz-score {
+    font-size: 25px;
+    margin: 0 5px 2.5px 5px;
+}
+
+.questions-container {
+    height: 500px;
+    overflow-y: scroll;
+    margin-bottom: 5px;
+
+}
+
+.quiz-container {
+    border: 1px solid #E0F0FF;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 0 15px 15px 0px;
+}
+
+.button-container {
+    margin: 2.5px 0;
+    text-align: center;
+    display: flex;
+}
+
+.quiz-button {
+    height: 35px;
+    width: 50%;
+    margin: 0 2.5px;
+    background-color: #2862E5;
+    color: #ffffff;
+    font-size: 14px;
+}

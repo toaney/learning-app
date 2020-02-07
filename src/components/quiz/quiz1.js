@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useReducer, Fragment } from 'react';
-import Question1 from '../question/question1.js'
-import Question from '../question/question.js'
+import Question1 from '../question/question1.js';
+import Question from '../question/question.js';
+import './quiz.scss';
 
 const Quiz = () => {
     const initialState = [
@@ -9,8 +10,8 @@ const Quiz = () => {
             question: "Question 1 sample text?",
             answers: ["answer 1", "answer 2", "answer 3", "answer 4"], 
             correctAnswer: "answer 1",
-            currentAnswer: null,
-            answeredCorrectly: false
+            currentAnswer: "answer 1",
+            answeredCorrectly: true
         }, 
         {
             id: '3e2',
@@ -59,7 +60,7 @@ const Quiz = () => {
             case 'CORRECT': 
                 return state.map(question => {
                     if (question.id === action.id) {
-                        return { ...question, answeredCorrectly: true, currentAnswer: action.answer  };
+                        return { ...question, answeredCorrectly: true, currentAnswer: action.currentAnswer  };
                     } else {
                         return question;
                     }
@@ -67,7 +68,7 @@ const Quiz = () => {
             case 'INCORRECT': 
                 return state.map(question => {
                     if (question.id === action.id) {
-                        return { ...question, answeredCorrectly: false, currentAnswer: action.answer };
+                        return { ...question, answeredCorrectly: false, currentAnswer: action.currentAnswer };
                     } else {
                         return question;
                     }
@@ -84,30 +85,32 @@ const Quiz = () => {
     const [ displayAnswers, setDisplayAnswers ] = useState(false)
 
     return(
-        <Fragment>
+        <div className="quiz-container">
             {displayAnswers?
-                <p>
-                    correct: {state.reduce((total, current) => {
+                <Fragment>
+                <div className="questions-container">
+                    {state.map((item)=> (
+                        <Question1 questions={item} dispatch={dispatch} key={item.id}/>
+                    ))}
+                </div>
+                <p className="quiz-score">
+                    Score: {state.reduce((total, current) => {
                         return current.answeredCorrectly? total + 1 : total
                     }, 0)}/{state.length}
                 </p>
+                </Fragment>
             :
-                ""
+                <div className="questions-container">
+                    {state.map((item)=> (
+                        <Question questions={item} dispatch={dispatch} key={item.id}/>
+                    ))}
+                </div>
             }
-
-            {displayAnswers?
-                state.map((item)=> (
-                    <Question1 questions={item} dispatch={dispatch} key={item.id}/>
-                ))
-            :
-                state.map((item)=> (
-                    <Question questions={item} dispatch={dispatch} key={item.id}/>
-                ))
-            }
-
-            <button onClick={() => setDisplayAnswers(true)}>Check Answers</button>
-            <button onClick={() => setDisplayAnswers(false)}>Retake Test</button>
-        </Fragment>
+            <div className="button-container">
+                <button className="quiz-button" onClick={() => setDisplayAnswers(true)}>Check Answers</button>
+                <button className="quiz-button" onClick={() => setDisplayAnswers(false)}>Retake Test</button>
+            </div>
+        </div>
     )
 }
 

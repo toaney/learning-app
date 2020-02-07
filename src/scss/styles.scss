@@ -1,21 +1,48 @@
 body {
     margin: 0;
     background-color: #E0F0FF;
+    font-family: proxima-nova, "Helvetica", "Arial", sans-serif;
 }
 
-.content {
+.content-container {
     max-width: 900px;
     background-color: #ffffff;
     border-radius: 4px;
     margin: 20px auto;
+}
+
+.content {
     display: flex;
 }
 
-.sidebar {
-    width: 220px;
-    background-color: #eeeeee;
+.content-header {
+    padding: 5px 10px 10px 10px;
 }
 
-.main {
-    width: 600px;
+.content-sidebar {
+    width: 35%;
+    // height: 400px;
+    // overflow-y: scroll;
+    // margin-bottom: 20px;
+}
+
+.content-main {
+    width: 65%;
+    margin: 0px 10px 0px 15px;
+}
+
+.content-video {
+    // margin: 0px 10px 0px 15px;
+}
+
+// .content-description {
+//     margin: 0px 10px 5px 15px;
+// }
+
+.content-description-features {
+    margin-bottom: 2.5px;
+}
+
+.content-description-features-list {
+    margin-top: 2.5px;
 }

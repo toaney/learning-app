@@ -11,13 +11,13 @@ import Hyp3 from './pages/hyp3';
 import Hyp4 from './pages/hyp4';
 import Hyp5 from './pages/hyp5';
 import Header from './components/header/header';
-import TagManager from 'react-gtm-module';
+// import TagManager from 'react-gtm-module';
 
-const tagManagerArgs = {
-  gtmId: 'GTM-55PQJ8C'
-}
+// const tagManagerArgs = {
+//   gtmId: 'GTM-55PQJ8C'
+// }
 
-TagManager.initialize(tagManagerArgs)
+// TagManager.initialize(tagManagerArgs)
 
 // Initialize google analytics
 // ReactGA.initialize("UA-157900850-1");

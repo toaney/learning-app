@@ -1,10 +1,18 @@
 import React, { useEffect } from 'react';
 import Quiz2 from '../components/quiz/quiz2';
 // import ReactGA from 'react-ga';
+// import TagManager from 'react-gtm-module';
+
+// const tagManagerArgs = {
+//     gtmId: 'GTM-55PQJ8C',
+//     dataLayer: {
+//         page: 'hyp2'
+//     }
+// }
 
 const Hyp2 = () => {
     // useEffect(() => {
-    //     ReactGA.pageview('/hyp1')
+    //     TagManager.dataLayer(tagManagerArgs)
     // }, [])
 
     return(
