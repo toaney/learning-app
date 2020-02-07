@@ -1,4 +1,5 @@
 import React, { useState, useReducer, Fragment } from 'react';
+import ReactGA from 'react-ga';
 import Question4 from '../question/question4.js';
 import Question from '../question/question.js';
 import './quiz.scss';
@@ -73,6 +74,10 @@ const Quiz4 = () => {
                         return question;
                     }
                 });
+            case 'RETAKE': 
+                return state.map(question => {
+                    return { ...question, answeredCorrectly: false, currentAnswer: null };
+                });
             default: 
                 return state;
         }
@@ -83,6 +88,29 @@ const Quiz4 = () => {
         initialState
     )
     const [ displayAnswers, setDisplayAnswers ] = useState(false)
+
+    const checkAnswers = () => {
+        setDisplayAnswers(true)
+
+        ReactGA.event({
+            category: `${window.location.pathname} button`,
+            action: 'check answers'
+        });
+    }
+
+    const retakeTest = () => {
+        setDisplayAnswers(false)
+
+        ReactGA.event({
+            category: `${window.location.pathname} button`,
+            action: 'retake test'
+        });
+
+        // clear user's currentAnswers from state
+        dispatch({
+            type: 'RETAKE',
+        })
+    }
 
     return(
         <div className="quiz-container">
@@ -107,8 +135,8 @@ const Quiz4 = () => {
                 </div>
             }
             <div className="button-container">
-                <button className="quiz-button" onClick={() => setDisplayAnswers(true)}>Check Answers</button>
-                <button className="quiz-button" onClick={() => setDisplayAnswers(false)}>Retake Test</button>
+                <button className="quiz-button" onClick={() => checkAnswers()}>Check Answers</button>
+                <button className="quiz-button" onClick={() => retakeTest()}>Retake Test</button>
             </div>
         </div>
     )

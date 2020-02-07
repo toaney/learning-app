@@ -1,4 +1,5 @@
 import React, { useState, useEffect, Fragment} from 'react';
+import ReactGA from 'react-ga';
 import "./question.scss";
 
 const Question4 = ({dispatch, questions}) => {
@@ -19,6 +20,11 @@ const Question4 = ({dispatch, questions}) => {
 
         // dispatch user action
         if(userAnswer === questions.correctAnswer){
+            ReactGA.event({
+                category: `${window.location.pathname} answer ${questions.id}`,
+                action: 'correct'
+            });
+
             dispatch({
                 type: 'CORRECT',
                 id: questions.id,
@@ -26,6 +32,11 @@ const Question4 = ({dispatch, questions}) => {
                 answeredCorrectly: true
             })
         } else {
+            ReactGA.event({
+                category: `${window.location.pathname} answer ${questions.id}`,
+                action: 'incorrect'
+            });
+
             dispatch({
                 type: 'INCORRECT',
                 id: questions.id,
