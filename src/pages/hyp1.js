@@ -19,6 +19,7 @@ const Hyp1 = () => {
                             <li>video remains in view at all times</li>
                             <li>questions presented in a scrollable sidebar</li>
                             <li>correct answers are displayed after user clicks "Check Answers"</li>
+                            <li>"Retake Test" button encourages users to improve their score</li>
                         </ul>
                     </div>
                 </div>

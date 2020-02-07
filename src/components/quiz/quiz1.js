@@ -11,7 +11,7 @@ const Quiz = () => {
             answers: ["The beginning", "The middle", "The end", "The definition"], 
             correctAnswer: "The beginning",
             currentAnswer: null,
-            answeredCorrectly: true
+            answeredCorrectly: false
         }, 
         {
             id: '3e2',

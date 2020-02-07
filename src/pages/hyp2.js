@@ -1,27 +1,31 @@
 import React, { useEffect } from 'react';
+import Sidebar from '../components/sidebar/sidebar';
 import Quiz2 from '../components/quiz/quiz2';
-// import ReactGA from 'react-ga';
-// import TagManager from 'react-gtm-module';
-
-// const tagManagerArgs = {
-//     gtmId: 'GTM-55PQJ8C',
-//     dataLayer: {
-//         page: 'hyp2'
-//     }
-// }
 
 const Hyp2 = () => {
-    // useEffect(() => {
-    //     TagManager.dataLayer(tagManagerArgs)
-    // }, [])
 
     return(
-        <div className="content">
-            <main className="main">
-                <h1>Hypothesis 2</h1>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/mRdMYuNeAng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <Quiz2 />
-            </main>
+        <div className="content-container">
+            <div className="content-header">
+            </div>
+            <div className="content">
+                <div className="content-main">
+                    <iframe className="content-video" width="560" height="315" src="https://www.youtube.com/embed/mRdMYuNeAng?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div className="content-description">
+                        <h1>Hypothesis 2</h1>
+                        <p>Instant feedback on questions will result in less engagement with the video, but greater engagement with the questions/content.</p>
+                        <h4 className="content-description-features">Features:</h4>
+                        <ul className="content-description-features-list">
+                            <li>score tally is visible at all times</li>
+                            <li>question results are displayed immediately after an answer is selected</li>
+                            <li>only "Incorrect" is displayed for wrong answers to encourage users to continue analyzing the question</li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="content-sidebar">
+                    <Quiz2 />
+                </div>
+            </div>
         </div>
     )
 }
