@@ -1,14 +1,12 @@
-import React, { useEffect } from 'react';
-import Sidebar from '../components/sidebar/sidebar';
+import React from 'react';
 import Quiz2 from '../components/quiz/quiz2';
 
 const Hyp2 = () => {
-
     return(
         <div className="content-container">
             <div className="content">
                 <div className="content-main">
-                    <iframe className="content-video" width="560" height="315" src="https://www.youtube.com/embed/mRdMYuNeAng?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe className="content-video" width="560" height="315" src="https://www.youtube.com/embed/mRdMYuNeAng?enablejsapi=1" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen title="hyp2iFrame"></iframe>
                     <div className="content-description">
                         <h1>Hypothesis 2</h1>
                         <p>Instant feedback on questions will result in less engagement with the video, but greater engagement with the questions/content.</p>

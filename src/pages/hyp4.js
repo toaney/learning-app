@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import Sidebar from '../components/sidebar/sidebar';
 import Quiz4 from '../components/quiz/quiz4';
 
 const Hyp4 = () => {
     const [ sidebarClass, setSidebarClass ] = useState("content-sidebar disabled")
 
+    // timeout used for disabling quiz
     useEffect(()=> {
         const timer = setTimeout(() => {
             setSidebarClass("content-sidebar")
@@ -16,7 +16,7 @@ const Hyp4 = () => {
         <div className="content-container">
             <div className="content">
                 <div className="content-main">
-                    <iframe className="content-video" width="560" height="315" src="https://www.youtube.com/embed/mRdMYuNeAng?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe className="content-video" width="560" height="315" src="https://www.youtube.com/embed/mRdMYuNeAng?enablejsapi=1" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen title="hyp4iFrame"></iframe>
                     <div className="content-description">
                         <h1>Hypothesis 4</h1>
                         <p>Disabling questions for a period of time (20 seconds) will result in greater video engagement as users will not be able to skip the video and engage in questions immediately.</p>

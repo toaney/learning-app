@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useReducer, Fragment } from 'react';
+import React, { useReducer, Fragment } from 'react';
 import Question from '../question/question.js'
 
 const Quiz = () => {

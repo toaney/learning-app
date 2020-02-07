@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useReducer, Fragment } from 'react';
+import React, { useReducer, Fragment } from 'react';
 import Question2 from '../question/question2.js';
 import './quiz.scss';
 

@@ -1,9 +1,7 @@
-import React, { useEffect } from 'react';
-import Sidebar from '../components/sidebar/sidebar';
+import React from 'react';
 import Quiz3 from '../components/quiz/quiz3';
 
 const Hyp3 = () => {
-
     return(
         <div className="content-container">
             <div className="content">
@@ -18,7 +16,7 @@ const Hyp3 = () => {
                             <li>"Retake Test" button encourages users to improve their score</li>
                         </ul>
                     </div>
-                    <iframe className="content-video" width="560" height="315" src="https://www.youtube.com/embed/mRdMYuNeAng?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe className="content-video" width="560" height="315" src="https://www.youtube.com/embed/mRdMYuNeAng?enablejsapi=1" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen title="hyp3iFrame"></iframe>
                     <h3>Review</h3>
                     <Quiz3 />
                 </div>

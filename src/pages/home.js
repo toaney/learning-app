@@ -1,7 +1,4 @@
-import React, { useEffect } from 'react';
-import ReactGA from 'react-ga';
-
-ReactGA.pageview('/home')
+import React from 'react';
 
 const Home = () => {
     return(
