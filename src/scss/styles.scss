@@ -14,7 +14,14 @@ body {
 
 .content {
     display: flex;
+    flex-direction: row;
+    // @media (max-width: 920px) {
+    //     flex-direction: column;
+    // }
+
 }
+
+
 
 .content-header {
     padding: 5px 10px 10px 10px;
@@ -51,10 +58,38 @@ body {
     margin: 0 auto;
 }
 
+.hypotheses-container {
+    margin-left: 40px;
+}
+
+.hypotheses-container h3 {
+    margin: 40px 0 0 0;
+}
+
+.hypotheses-container .content-description-features-list, .hypotheses-container .content-description-features {
+    margin-top: 0;
+    margin-left: 40px;
+}
+
 .disabled { 
     pointer-events: none;
 
     /* for "disabled" effect */
     opacity: 0.5;
     background: #CCC;
+}
+
+@media (max-width: 920px) {
+    .content {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .content-main {
+        width: 100%;
+    }
+
+    .content-sidebar {
+        width: 100%;
+    }
 }

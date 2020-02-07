@@ -14,7 +14,6 @@ const Header = () => {
                         <span className="header-nav-link"><Link className="more-articles-link" to="/hyp2">hypothesis2</Link></span>
                         <span className="header-nav-link"><Link className="more-articles-link" to="/hyp3">hypothesis3</Link></span>
                         <span className="header-nav-link"><Link className="more-articles-link" to="/hyp4">hypothesis4</Link></span>
-                        <span className="header-nav-link"><Link className="more-articles-link" to="/hyp5">hypothesis5</Link></span>
                     </span>
                 </nav>
             </div>
