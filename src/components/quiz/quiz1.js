@@ -7,49 +7,49 @@ const Quiz = () => {
     const initialState = [
         {
             id: '3e1',
-            question: "Question 1 sample text?",
-            answers: ["answer 1", "answer 2", "answer 3", "answer 4"], 
-            correctAnswer: "answer 1",
-            currentAnswer: "answer 1",
+            question: "Where do you find a prefix in a word?",
+            answers: ["The beginning", "The middle", "The end", "The definition"], 
+            correctAnswer: "The beginning",
+            currentAnswer: null,
             answeredCorrectly: true
         }, 
         {
             id: '3e2',
-            question: "Question 2 sample text?",
-            answers: ["answer 1", "answer 2", "answer 3", "answer 4"], 
-            correctAnswer: "answer 2",
+            question: 'Which prefix DOES NOT mean "not"?',
+            answers: ["non", "semi", "un", "ir"], 
+            correctAnswer: "semi",
             currentAnswer: null,
             answeredCorrectly: false
         }, 
         {
             id: '3e3',
-            question: "Question 3 sample text?",
-            answers: ["answer 1", "answer 2", "answer 3", "answer 4"], 
-            correctAnswer: "answer 3",
+            question: 'What is the meaning of the prefix "anti"?',
+            answers: ["before", "against", "too much", "cure"], 
+            correctAnswer: "against",
             currentAnswer: null,
             answeredCorrectly: false
         },
         {
             id: '3e4',
-            question: "Question 4 sample text?",
-            answers: ["answer 1", "answer 2", "answer 3", "answer 4"], 
-            correctAnswer: "answer 1",
+            question: 'What is the meaning of the prefix "micro"?',
+            answers: ["cook", "large", "small", "before"], 
+            correctAnswer: "small",
             currentAnswer: null,
             answeredCorrectly: false
         }, 
         {
             id: '3e5',
-            question: "Question 5 sample text?",
-            answers: ["answer 1", "answer 2", "answer 3", "answer 4"], 
-            correctAnswer: "answer 2",
+            question: "Where do most prefixes originate from?",
+            answers: ["Arabic & Amharic", "French & English", "Greek & Latin", "Czech & Dutch"], 
+            correctAnswer: "Greek & Latin",
             currentAnswer: null,
             answeredCorrectly: false
         }, 
         {
             id: '3e6',
-            question: "Question 6 sample text?",
-            answers: ["answer 1", "answer 2", "answer 3", "answer 4"], 
-            correctAnswer: "answer 3",
+            question: "Which is NOT a prefix mentioned in the video?",
+            answers: ["inter", "macro", "ex", "tele"], 
+            correctAnswer: "ex",
             currentAnswer: null,
             answeredCorrectly: false
         }
